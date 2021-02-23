@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<!--<html lang="ru">-->
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -10,6 +10,17 @@
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
+    <br/>
+    <br/>
+    <form action="/cars" method="get">
+        <fieldset>
+            <legend>How many cars you need to see?</legend>
+            Count: <input type="text" name="count" size="30" />
+            <br />
+            <br />
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
 </div>
 </body>
 </html>
